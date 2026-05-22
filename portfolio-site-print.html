@@ -1827,4 +1827,37 @@ html{scroll-behavior:smooth;}
 })();
 </script>
 
+
+<style id="__print_overrides">
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  html, body { background:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .global-nav { display:none !important; }
+  section[id], footer { break-inside: avoid-page; page-break-inside: avoid; }
+  .hero, .tile { padding: 28px 16px !important; min-height: auto !important; }
+  .work-card, .num-stat, .feedback-card, .strength-item, .loop-step, .outcome-item, .company, .profile-block {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .reveal { opacity:1 !important; transform:none !important; }
+  .stagger > .reveal { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .work-card:hover, .feedback-card:hover, .btn-primary:hover, .btn-secondary:hover, .outcome-item:hover { transform: none !important; box-shadow: none !important; }
+  .hero-headline .brand-word { color: var(--c-primary) !important; }
+  .sparkle-word { color: var(--c-primary) !important; }
+  a[href]::after { content: ""; }
+}
+</style>
+<script>
+(function(){
+  function go(){
+    setTimeout(function(){ window.print(); }, 700);
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(go);
+  } else {
+    window.addEventListener('load', go);
+  }
+})();
+</script>
+
 </body></html>
