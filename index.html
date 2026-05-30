@@ -1139,6 +1139,22 @@ img{max-width:100%;height:auto;}
   .btn-primary,.btn-secondary{padding:13px 20px;font-size:16px;}
   .btn-primary b,.btn-secondary b{font-size:16px !important;}
 }
+/* ---------- Contact action buttons: keep on ONE row on phones ---------- */
+@media (max-width:600px){
+  .contact-actions{flex-wrap:nowrap !important;gap:8px !important;align-items:stretch;}
+  .contact-actions .btn-primary,
+  .contact-actions .btn-secondary{
+    padding:11px 12px !important;font-size:12px !important;
+    white-space:nowrap;flex:0 1 auto;min-width:0;text-align:center;
+  }
+  .contact-actions .lbl{font-size:12px !important;}
+}
+@media (max-width:380px){
+  .contact-actions{gap:6px !important;}
+  .contact-actions .btn-primary,
+  .contact-actions .btn-secondary{padding:10px 8px !important;font-size:11px !important;}
+  .contact-actions .lbl{font-size:11px !important;}
+}
 
 /* ---------- Tile headings / taglines (beat inline sizes) ---------- */
 @media (max-width:600px){
@@ -1179,14 +1195,14 @@ img{max-width:100%;height:auto;}
   .numbers-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px;}
 }
 @media (max-width:600px){
-  .num-stat{padding:22px 20px;min-height:auto;}
-  .num-stat-n{font-size:34px !important;white-space:normal;}
-  .num-stat-d{font-size:15px;}
-  .num-stat-sub{font-size:12px;}
+  .num-stat{padding:16px 14px;min-height:auto;}
+  .num-stat-n{font-size:24px !important;white-space:normal;letter-spacing:-0.6px;}
+  .num-stat-d{font-size:13px;}
+  .num-stat-sub{font-size:11px;}
 }
 @media (max-width:480px){
-  .numbers-grid{grid-template-columns:1fr !important;}
-  .num-stat-n{font-size:38px !important;}
+  .numbers-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .num-stat-n{font-size:21px !important;}
 }
 
 /* ---------- STRENGTH ---------- */
@@ -1210,22 +1226,20 @@ img{max-width:100%;height:auto;}
 
 /* ---------- WORK CARDS ---------- */
 @media (max-width:600px){
-  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px;align-items:stretch;}
-  .work-card{padding:16px 14px !important;min-height:auto;}
-  .work-card-meta{font-size:10px;gap:5px;}
-  .work-card-title{font-size:17px !important;margin-top:8px;}
-  .work-card-sub{font-size:12px !important;margin-top:7px;line-height:1.45;}
+  .work-grid{grid-template-columns:1fr !important;gap:16px;}
+  .work-card{padding:24px 22px !important;min-height:auto;}
+  .work-card-title{font-size:22px !important;margin-top:12px;}
+  .work-card-sub{font-size:14px !important;margin-top:8px;line-height:1.5;}
   .work-card-sub br{display:none;}
-  .work-card-stats{grid-template-columns:1fr !important;gap:5px !important;margin-top:14px;}
-  .work-card-stat{flex-direction:row !important;align-items:baseline;justify-content:space-between;gap:8px;padding:8px 10px !important;min-height:auto;}
-  .work-card-stat-n{font-size:15px !important;letter-spacing:-0.5px;}
-  .work-card-stat-d{font-size:10px;text-align:right;}
-  .work-card-cta{font-size:12px;margin-top:12px;}
+  .work-card-stats{grid-template-columns:repeat(3,1fr) !important;gap:8px !important;margin-top:20px;}
+  .work-card-stat{flex-direction:column !important;align-items:flex-start;justify-content:center;gap:4px;padding:12px 10px !important;min-height:auto;}
+  .work-card-stat-n{font-size:18px !important;letter-spacing:-0.5px;}
+  .work-card-stat-d{font-size:11px;text-align:left;}
+  .work-card-cta{font-size:14px;margin-top:16px;}
 }
 @media (max-width:380px){
-  .work-card{padding:14px 12px !important;}
-  .work-card-title{font-size:15px !important;}
-  .work-card-sub{font-size:11px !important;}
+  .work-card-stat-n{font-size:16px !important;}
+  .work-card-stat-d{font-size:10px;}
 }
 
 /* ---------- FEEDBACK ---------- */
@@ -1854,7 +1868,7 @@ img{max-width:100%;height:auto;}
       <div class="tile-eyebrow">Contact</div>
       <h2 class="footer-contact-h" style="font-size: 56px">브랜딩으로<br><span class="sparkle-word">지표 성장</span>을 만드는 마케터</h2>
       <p class="footer-contact-sub" style="margin: 25px 0px 0px; font-size: 24px">유저의 마음을 집요하게 관찰하고<br>데이터를 통해 끊임없이 검증하며</p><div style="font-size: 24px; margin: 0px 0px 36px"><span style="font-weight: bold;">브랜드의 진심이 실제 성과와 장기적인 지표 성장으로<br>이어지는 순간</span>을 만들어갑니다.</div><p></p>
-      <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 0px">
+      <div class="contact-actions" style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 0px">
         <a href="mailto:journey.jxj@gmail.com" class="btn-primary" data-hover><span class="lbl"><span class="lbl-en">Mail</span><span class="lbl-ko">메일</span></span></a>
         <a href="sms:+8201041633171" class="btn-secondary" data-hover><span class="lbl"><span class="lbl-en">Phone</span><span class="lbl-ko">메시지</span></span></a>
         <a href="assets/professional-experience.pdf" target="_blank" rel="noopener" class="btn-secondary" data-hover><span class="lbl"><span class="lbl-en">Professional Experience</span><span class="lbl-ko">경력기술서</span></span></a>
