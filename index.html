@@ -667,7 +667,7 @@ section[id]{scroll-margin-top:60px;}
   display:grid;
   grid-template-columns:280px 1fr;
   gap:48px;
-  margin-top:64px;
+  margin-top:40px;
   align-items:center;
   background:var(--c-canvas);
   border-radius:24px;
@@ -1117,6 +1117,11 @@ img{max-width:100%;height:auto;}
   .footer-contact{padding:0 0 52px !important;}
   .tile-head{margin-bottom:38px;}
 }
+/* Uniform horizontal gutter on phones (match How I Work section) */
+@media (max-width:600px){
+  .tile, section.hero, .footer, #contact.footer{padding-left:18px !important;padding-right:18px !important;}
+  .tile-inner, .hero-inner, .footer-inner{padding-left:0 !important;padding-right:0 !important;}
+}
 
 /* ---------- HERO ---------- */
 @media (max-width:600px){
@@ -1145,8 +1150,9 @@ img{max-width:100%;height:auto;}
 /* ---------- ABOUT ---------- */
 @media (max-width:600px){
   .about-headline{font-size:26px !important;letter-spacing:-0.6px;margin:16px 0 0 !important;}
-  .about-body-text{font-size:16px !important;margin-top:36px !important;}
-  .about-body-text br{display:none;}
+  .about-body-text{font-size:13px !important;margin-top:30px !important;line-height:1.78 !important;}
+  .about-body-text p{margin-bottom:16px;}
+  .about-body-text br{display:inline !important;}
   .profile-block{padding:26px 20px !important;}
   .profile-img{width:160px !important;height:160px !important;}
   .profile-name{font-size:26px !important;}
@@ -1204,15 +1210,22 @@ img{max-width:100%;height:auto;}
 
 /* ---------- WORK CARDS ---------- */
 @media (max-width:600px){
-  .work-grid{gap:16px;}
-  .work-card{padding:24px 22px !important;min-height:auto;}
-  .work-card-title{font-size:22px !important;}
-  .work-card-sub{font-size:15px !important;}
+  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px;align-items:stretch;}
+  .work-card{padding:16px 14px !important;min-height:auto;}
+  .work-card-meta{font-size:10px;gap:5px;}
+  .work-card-title{font-size:17px !important;margin-top:8px;}
+  .work-card-sub{font-size:12px !important;margin-top:7px;line-height:1.45;}
   .work-card-sub br{display:none;}
-  .work-card-stats{gap:8px !important;}
-  .work-card-stat{padding:12px 10px;min-height:auto;}
-  .work-card-stat-n{font-size:16px !important;letter-spacing:-0.5px;}
-  .work-card-stat-d{font-size:11px;}
+  .work-card-stats{grid-template-columns:1fr !important;gap:5px !important;margin-top:14px;}
+  .work-card-stat{flex-direction:row !important;align-items:baseline;justify-content:space-between;gap:8px;padding:8px 10px !important;min-height:auto;}
+  .work-card-stat-n{font-size:15px !important;letter-spacing:-0.5px;}
+  .work-card-stat-d{font-size:10px;text-align:right;}
+  .work-card-cta{font-size:12px;margin-top:12px;}
+}
+@media (max-width:380px){
+  .work-card{padding:14px 12px !important;}
+  .work-card-title{font-size:15px !important;}
+  .work-card-sub{font-size:11px !important;}
 }
 
 /* ---------- FEEDBACK ---------- */
@@ -1251,7 +1264,7 @@ img{max-width:100%;height:auto;}
 <section id="hero" class="tile light hero" style="padding: 110px 22px">
   <div class="hero-inner">
     <div class="hero-eyebrow" style="letter-spacing: 0px; font-size: 16px">Brand Marketer    l    Jung Junghee    l    journey.jxj@gmail.com</div>
-    <h1 class="hero-headline" style="">압도적인 지표 성장,<br>결국은 <span class="brand-word">브랜딩</span>이었습니다.</h1>
+    <h1 class="hero-headline" style="">압도적인 지표 성장,<br>결국 <span class="brand-word">브랜딩</span>이었습니다.</h1>
     <p class="hero-tagline" style="font-size: 24px; margin: 30px 0px 20px; line-height: 1.48">경계 없는 마케팅 통찰과 집요함으로<br>폭발적인 유입을 넘어<br><em>장기적인 지표 성장</em>을 현실로 만듭니다.</p>
     <div class="btn-row">
       <a href="#work" class="btn-primary" data-hover style="font-family: GmarketSans;"><b style="font-family: GmarketSans; font-size: 18px;"><span class="lbl"><span class="lbl-en">Project</span><span class="lbl-ko">프로젝트</span></span></b></a>
